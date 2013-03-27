@@ -492,8 +492,9 @@ static bool check_for_call(bool load_register, unsigned int val)
 	}
 
 	// check via register WM8994_AIF2DACR if currently call active
-	if (!(val & WM8994_AIF2DACR_SRC_MASK))
-		return true;
+	// TODO find a clean way to detect call active
+	//if (!(val & WM8994_AIF2DACR_SRC_MASK))
+	//	return true;
 
 	return false;
 }
